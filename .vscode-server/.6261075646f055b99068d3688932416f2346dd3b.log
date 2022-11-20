@@ -1,0 +1,2435 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to 127.0.0.1:37466 (IPv4)
+Extension host agent listening on 37466
+
+[16:57:32] Extension host agent started.
+[16:57:34] [127.0.0.1][ed81ebfa][ManagementConnection] New connection established.
+[16:57:36] [127.0.0.1][21756705][ExtensionHostConnection] New connection established.
+[16:57:36] [127.0.0.1][21756705][ExtensionHostConnection] <52322> Launched Extension Host Process.
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata:true' -O - http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata:true' http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/latest/meta-data/instance-id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/latest/meta-data/instance-id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/metadata/v1/id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/metadata/v1/id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata-Flavor:Google' -O - http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata-Flavor:Google' http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[16:58:29] [127.0.0.1][ed81ebfa][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[16:58:29] [127.0.0.1][21756705][ExtensionHostConnection] <52322> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[16:58:29] Last EH closed, waiting before shutting down
+Got delay-shutdown request while in shutdown timeout, delaying
+[16:58:48] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[16:58:48] Cancelling previous shutdown timeout
+[16:58:50] [127.0.0.1][73f954b7][ManagementConnection] New connection established.
+[16:58:51] [127.0.0.1][ee9da084][ExtensionHostConnection] New connection established.
+[16:58:51] [127.0.0.1][ee9da084][ExtensionHostConnection] <52532> Launched Extension Host Process.
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata:true' -O - http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata:true' http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/latest/meta-data/instance-id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/latest/meta-data/instance-id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/metadata/v1/id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/metadata/v1/id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata-Flavor:Google' -O - http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata-Flavor:Google' http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[17:00:58] [127.0.0.1][73f954b7][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[17:00:58] [127.0.0.1][ee9da084][ExtensionHostConnection] <52532> Extension Host Process exited with code: 0, signal: null.
+Cancelling previous shutdown timeout
+[17:00:58] Cancelling previous shutdown timeout
+Last EH closed, waiting before shutting down
+[17:00:58] Last EH closed, waiting before shutting down
+Got delay-shutdown request while in shutdown timeout, delaying
+[17:01:33] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[17:01:33] Cancelling previous shutdown timeout
+[17:01:36] [127.0.0.1][0af82635][ManagementConnection] New connection established.
+[17:01:39] [127.0.0.1][e2c1f4f0][ExtensionHostConnection] New connection established.
+[17:01:39] [127.0.0.1][e2c1f4f0][ExtensionHostConnection] <52713> Launched Extension Host Process.
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata:true' -O - http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata:true' http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/latest/meta-data/instance-id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/latest/meta-data/instance-id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/metadata/v1/id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/metadata/v1/id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata-Flavor:Google' -O - http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata-Flavor:Google' http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[17:05:16] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:05:16] [127.0.0.1][0af82635][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+Got delay-shutdown request while in shutdown timeout, delaying
+[17:05:39] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[17:05:39] Cancelling previous shutdown timeout
+[17:05:41] [127.0.0.1][0af82635][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[17:05:41] [127.0.0.1][0af82635][ManagementConnection] The client has reconnected.
+[17:05:43] [127.0.0.1][e2c1f4f0][ExtensionHostConnection] The client has reconnected.
+[17:06:07] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:07] [127.0.0.1][0af82635][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+Got delay-shutdown request while in shutdown timeout, delaying
+[17:06:28] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[17:06:28] Cancelling previous shutdown timeout
+[17:06:31] [127.0.0.1][0af82635][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[17:06:31] [127.0.0.1][0af82635][ManagementConnection] The client has reconnected.
+[17:06:32] [127.0.0.1][e2c1f4f0][ExtensionHostConnection] The client has reconnected.
+[17:06:56] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:06:56] [127.0.0.1][0af82635][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+Got delay-shutdown request while in shutdown timeout, delaying
+[17:07:34] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[17:07:34] Cancelling previous shutdown timeout
+[17:07:38] [127.0.0.1][0af82635][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[17:07:38] [127.0.0.1][0af82635][ManagementConnection] The client has reconnected.
+[17:07:40] [127.0.0.1][e2c1f4f0][ExtensionHostConnection] The client has reconnected.
+[17:08:03] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:03] [127.0.0.1][0af82635][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+Got delay-shutdown request while in shutdown timeout, delaying
+[17:08:27] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[17:08:27] Cancelling previous shutdown timeout
+[17:08:29] [127.0.0.1][0af82635][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[17:08:29] [127.0.0.1][0af82635][ManagementConnection] The client has reconnected.
+[17:08:30] [127.0.0.1][e2c1f4f0][ExtensionHostConnection] The client has reconnected.
+[17:08:55] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:08:55] [127.0.0.1][0af82635][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+Got delay-shutdown request while in shutdown timeout, delaying
+[17:09:16] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[17:09:16] Cancelling previous shutdown timeout
+[17:09:20] [127.0.0.1][0af82635][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[17:09:20] [127.0.0.1][0af82635][ManagementConnection] The client has reconnected.
+[17:09:22] [127.0.0.1][e2c1f4f0][ExtensionHostConnection] The client has reconnected.
+[17:09:45] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:09:45] [127.0.0.1][0af82635][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+Got delay-shutdown request while in shutdown timeout, delaying
+[17:10:23] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[17:10:23] Cancelling previous shutdown timeout
+[17:10:25] [127.0.0.1][0af82635][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[17:10:25] [127.0.0.1][0af82635][ManagementConnection] The client has reconnected.
+[17:10:26] [127.0.0.1][e2c1f4f0][ExtensionHostConnection] The client has reconnected.
+[17:10:49] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:10:49] [127.0.0.1][0af82635][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+Got delay-shutdown request while in shutdown timeout, delaying
+[17:11:13] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[17:11:13] Cancelling previous shutdown timeout
+[17:11:16] [127.0.0.1][0af82635][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[17:11:16] [127.0.0.1][0af82635][ManagementConnection] The client has reconnected.
+[17:11:19] [127.0.0.1][e2c1f4f0][ExtensionHostConnection] The client has reconnected.
+[17:11:41] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] Error [ERR_STREAM_DESTROYED]: Cannot call write after a stream was destroyed
+    at new NodeError (node:internal/errors:371:5)
+    at errorBuffer (node:internal/streams/writable:517:14)
+    at afterWrite (node:internal/streams/writable:501:5)
+    at onwrite (node:internal/streams/writable:477:7)
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:12) {
+  code: 'ERR_STREAM_DESTROYED'
+}
+[17:11:41] [127.0.0.1][0af82635][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+New EH opened, aborting shutdown
+[17:16:13] New EH opened, aborting shutdown
+[17:38:36] [127.0.0.1][0af82635][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[17:38:36] [127.0.0.1][ba284861][ManagementConnection] New connection established.
+[17:38:37] [127.0.0.1][cf5c2866][ExtensionHostConnection] New connection established.
+[17:38:37] [127.0.0.1][cf5c2866][ExtensionHostConnection] <53779> Launched Extension Host Process.
+[17:38:39] [File Watcher (parcel)] Inotify limit reached (ENOSPC) (path: /home)
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata:true' -O - http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata:true' http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/latest/meta-data/instance-id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/latest/meta-data/instance-id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/metadata/v1/id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/metadata/v1/id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata-Flavor:Google' -O - http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata-Flavor:Google' http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[17:43:26] Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[17:43:26] [127.0.0.1][ba284861][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+[17:43:36] [127.0.0.1][0af82635][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+[17:43:36] [127.0.0.1][e2c1f4f0][ExtensionHostConnection] <52713> Extension Host Process exited with code: 0, signal: null.
+[17:43:59] [127.0.0.1][ba284861][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+[17:43:59] [127.0.0.1][ba284861][ManagementConnection] The client has reconnected.
+[17:44:38] [127.0.0.1][ba284861][ManagementConnection] The client has reconnected.
+[17:45:06] [127.0.0.1][cf5c2866][ExtensionHostConnection] The client has reconnected.
