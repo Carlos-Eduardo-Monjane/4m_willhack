@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>
-        Minhas Indicações
+        4M
     </title>
 
     <link rel="icon" href="{{ asset('assets/img/logo-ct-dark.png') }}" type="image/png" />

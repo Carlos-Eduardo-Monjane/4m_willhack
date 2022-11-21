@@ -38,6 +38,7 @@ class IndicarController extends Controller
 
         $afiliados = User::where('user_type_id', 2)->get();
         $profissionais = User::where('user_type_id', 3)->get();
+
         return view('parceiro.indicacao')->with(["profissionais"=>$profissionais,"afiliados"=>$afiliados, "indicacoes"=>$indicacoes, "indicacoes_count"=>$indicacoes_count, 'msg' => '']);
       
        }
@@ -83,12 +84,12 @@ class IndicarController extends Controller
         $indicacoes_count = $indicacoes->count();
 
         $afiliados = User::where('user_type_id', 2)->get();
-        // $profissionais = User::where('user_type_id', 3)->get();
+        $profissionais = User::where('user_type_id', 3)->get();
         
-        $profissionais = Profissional_Favorito::with('pro_favorito.shop')
-        ->with('pro_favorito.specialty')
-        ->with('pro_favorito.oferta_do_profissinal')
-        ->with('pro_favorito.subspecialty')->where('cliente_id', Auth::user()->id)->get();
+        // $profissionais = Profissional_Favorito::with('pro_favorito.shop')
+        // ->with('pro_favorito.specialty')
+        // ->with('pro_favorito.oferta_do_profissinal')
+        // ->with('pro_favorito.subspecialty')->where('cliente_id', Auth::user()->id)->get();
     
         
         

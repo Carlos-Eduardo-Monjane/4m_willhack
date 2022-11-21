@@ -17,7 +17,7 @@ class Shop extends Authenticatable
      *
      * @var array
      */
-    public $table = 'shops';
+    public $table = 'empresas';
    
     public function products(){
         return $this->hasMany('App\Produto', 'shop_id', 'id');

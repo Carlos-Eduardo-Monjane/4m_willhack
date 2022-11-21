@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Minhas Indicações</title>
+    <title>4M</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link rel="icon" href="{{ asset('assets/img/logo-ct-dark.png')}}" type="image/png"/>
@@ -53,11 +53,6 @@
 
 
 
-
-
-
-
-
 </head>
 <body class="g-sidenav-show  bg-gray-200">
 
@@ -66,200 +61,28 @@
           <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
           
               
-            <img src="../assets/img/150x50.png" class="mt-2 text-center align-items-center justify-content-center"  style="object-fit:cover; width:200px; margin-left:10px;"   alt="main_logo">
-            
-         <!--  <span class="navbar-brand-img" navbar-brand class="col-md-3 font-weight-bold text-white" STYLE="font-size:150%">Olá, {{ strlen(Auth::user()->name) >= 20 ? substr(Auth::user()->name,0,20).'...' : Auth::user()->name}}</span> 
+            {{-- <img src="../assets/img/150x50.png" class="mt-2 text-center align-items-center justify-content-center"  style="object-fit:cover; width:200px; margin-left:10px;"   alt="main_logo"> --}}
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="navbar-brand-img" navbar-brand class="col-md-3 font-weight-bold text-white text-capitalize" style="font-size:150%; color:white;">{{ strlen(Auth::user()->name) >= 20 ? substr(Auth::user()->name,0,20).'...' : Auth::user()->name}}</span> 
                    
-                 -->  
+                 
     
         </div>
         <hr class="horizontal light mt-0 mb-2">
         <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
           <ul class="navbar-nav">
 
-            {{-- ADMIN MASTER --}}
-            @if(Auth::user()->user_type_id == 1)
-            <li class="nav-item">
-              <a class="nav-link text-white active bg-gradient-primary" href="{{ url('/') }}">
-                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                  <i class="material-icons opacity-10" translate="no">dashboard</i>
-                </div>
-                <span class="nav-link-text ms-1">Início</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white " href="{{ url('admin.afiliados') }}">
-                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                  <i class="material-icons opacity-10" translate="no">face</i>
-                </div>
-                <span class="nav-link-text ms-1">Clientes</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white " href="{{ url('admin.profissional') }}">
-                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                  <i class="material-icons opacity-10" translate="no">manage_accounts</i>
-                </div>
-                <span class="nav-link-text ms-1">Profissionais</span>
-              </a>
-            </li>
 
-            <li class="nav-item">
-              <a class="nav-link text-white " href="{{ url('admin.indicacoes') }}">
-                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                  <i class="material-icons opacity-10" translate="no">settings_ethernet</i>
-                </div>
-                <span class="nav-link-text ms-1">Indicações</span>
-              </a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link text-white " href="{{ url('admin.categoria.index') }}">
-                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                  <i class="material-icons opacity-10" translate="no">stars</i>
-                </div>
-                <span class="nav-link-text ms-1">Categorias</span>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link text-white " href="{{ url('admin.perfil') }}">
-                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                  <i class="material-icons opacity-10" translate="no">person</i>
-                </div>
-                <span class="nav-link-text ms-1">Minha Conta</span>
-              </a>
-            </li>
-
-            @endif
+@include('layout.includes.sidebar_admin')
+@include('layout.includes.sidebar_user')
+@include('layout.includes.sidebar_empresa')
+@include('layout.includes.sidebar_paciente')
  
-            {{--  PROFISSIONAL (INDICACOES --}}
-                @if(Auth::user()->user_type_id == 3)
-                <li class="nav-item">
-                  <a class="nav-link text-white active bg-gradient-primary" href="{{ url('/') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                      <i class="material-icons opacity-10" translate="no">dashboard</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Início</span>
-                  </a>
-                </li>
 
-                
-                <li class="nav-item">
-                  <a class="nav-link text-white " href="{{ url('indicar.index') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                      <i class="material-icons opacity-10" translate="no">settings_ethernet</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Indicações</span>
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link text-white " href="{{ url('pro.oferta.index') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                      <i class="material-icons opacity-10" translate="no">card_giftcard</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Ofertas</span>
-                  </a>
-                </li>
-
-                  <li class="nav-item">
-                    <a class="nav-link text-white " href="{{ url('perfil') }}">
-                      <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10" translate="no">person</i>
-                      </div>
-                      <span class="nav-link-text ms-1">Perfil</span>
-                    </a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="nav-link text-white " href="{{ route('logout') }}" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
-                      <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10" translate="no">login</i>
-                        {{-- <i class="material-icons opacity-10">assignment</i> --}}
-                      </div>
-                      <span class="nav-link-text ms-1">Sair</span>
-                    </a>
-  
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                    style="display: none;">
-                    @csrf
-                </form>
-                  </li>
-
-
-                @endif
                 
                 
               
-{{-- AFILIADO --}}
-                @if(Auth::user()->user_type_id == 2 || Auth::user()->status == 'nao-autorizado')  
-                {{-- Conta de profissinal ou conta nao autorizada --}}
-                <li class="nav-item">
-                  <a class="nav-link text-white active bg-gradient-primary" href="{{ url('/') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                      <i class="material-icons opacity-10" translate="no">stars</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Início</span>
-                  </a>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link text-white " href="{{ url('/dashboard') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                      <i class="material-icons opacity-10" translate="no">dashboard</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Dashboard</span>
-                  </a>
-                </li>
-         
 
-                <li class="nav-item">
-                  <a class="nav-link text-white " href="{{ url('cliente.indicar.index') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                      <i class="material-icons opacity-10" translate="no">settings_ethernet</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Indicações</span>
-                  </a>
-                </li>
-
-
-
-                
-                                <li class="nav-item">
-                  <a class="nav-link text-white " href="{{ url('cliente.pro.oferta.index') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                      <i class="material-icons opacity-10" translate="no">card_giftcard</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Ofertas</span>
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link text-white " href="{{ url('perfil') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                      <i class="material-icons opacity-10" translate="no">person</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Perfil</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white " href="{{ route('logout') }}" onclick="event.preventDefault();
-                  document.getElementById('logout-form').submit();">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                      <i class="material-icons opacity-10" translate="no">login</i>
-                      {{-- <i class="material-icons opacity-10" translate="no">assignment</i> --}}
-                    </div>
-                    <span class="nav-link-text ms-1">Sair</span>
-                  </a>
-
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                  style="display: none;">
-                  @csrf
-              </form>
-                </li>
-                @endif
           </ul>
         </div>
       </aside>
@@ -282,11 +105,14 @@
                 @endif
                 
                 @if(Auth::user()->user_type_id == 2)
-                AFILIADO
+                PACIENTE
                 @endif
                 
                 @if(Auth::user()->user_type_id == 3)
-                PROFISSIONAL
+                EMPRESA
+                @endif
+                @if(Auth::user()->user_type_id == 4)
+                USUÁRIO
                 @endif
                 </h6>
                 
@@ -295,12 +121,9 @@
                
                    <div class="ms-md-auto pe-md-3 d-flex align-items-center text-primary">
                         @if(Auth::user()->user_type_id == 2)
-                  <div class="input-group input-group-outline text-primary btn btn-primary">
+                  <div class="input-group input-group-outline text-primary ">
 
-                <a href="{{ url('register.pro') }}" class="nav-link text-body font-weight-bold px-0">
-                  <i class="fa fa-id-card me-sm-1 text-white"></i>
-                  <span class="d-sm-inline text-white">Ser um profissional</span>
-                </a>
+               
              
                     {{-- <label class="form-label">Pesquisar...</label>
                     <input type="text" class="form-control"> --}}
@@ -520,7 +343,7 @@
       data: {
         labels: ["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"],
         datasets: [{
-          label: "Indicações",
+          label: "Agendamentos",
           tension: 0.4,
           borderWidth: 0,
           borderRadius: 4,
@@ -607,7 +430,7 @@
       data: {
         labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
         datasets: [{
-          label: "Indicações",
+          label: "Agendamentos",
           tension: 0,
           borderWidth: 0,
           pointRadius: 5,

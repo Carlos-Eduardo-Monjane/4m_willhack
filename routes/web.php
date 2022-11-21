@@ -1,5 +1,15 @@
 <?php
 
+// William
+Route::post('register_user', 'AdminController@registerUser')->name('register_user')->middleware('auth');
+Route::post('register_paciente', 'AdminController@registerPaciente')->name('register_paciente')->middleware('auth');
+Route::post('edit_paciente', 'AdminController@editPaciente')->name('edit_paciente')->middleware('auth');
+Route::post('edit_company', 'AdminController@editCompany')->name('edit_company')->middleware('auth');
+Route::post('create_company', 'AdminController@registerCompany')->name('create_company')->middleware('auth');
+
+
+
+
 // Registar Pro
 Route::get('register.pro', 'HomeController@registerPro')->name('register_pro')->middleware('auth');
 Route::post('register.pro', 'HomeController@registerProStore')->name('register.pro')->middleware('auth');
@@ -16,7 +26,7 @@ Route::get('parceiro-perfil-criar-conta', 'UserController@perfilCriarConta')->na
 Route::post('parceiro-perfil-criar-conta-confirmar', 'UserController@storeConta')->name('parceiro-perfil-criar-conta-confirmar')->middleware('auth');
 Route::get('parceiro-perfil-editar-conta', 'UserController@perfilEditarConta')->name('parceiro-editar-criar-conta')->middleware('auth');
 Route::post('perfil.actualizar.confirmar', 'UserController@updatePerfil')->middleware('auth');
-Route::get('perfil.editar', 'UserController@perfilEditarDados')->name('parceiro-editar-criar-dados')->middleware('auth');
+Route::get('perfil/editar', 'UserController@perfilEditarDados')->name('parceiro-editar-criar-dados')->middleware('auth');
 Route::post('shop.actualizar.confirmar', 'UserController@updateShop')->middleware('auth');
 
 
@@ -39,24 +49,24 @@ Route::get('plano-controle', 'PlanoController@index')->name('plano-controle')->m
 Route::get('perfil', 'UserController@perfil')->name('perfil')->middleware('auth');
 
 // ADMIN
-Route::get('admin.cliente.sidebar', 'AdminController@indexClientes')->name('perfil')->middleware('auth');
-Route::get('admin.profissional.sidebar', 'AdminController@indexProfissionais')->name('perfil')->middleware('auth');
-Route::get('admin.parceiro.sidebar', 'AdminController@indexParceiros')->name('perfil')->middleware('auth');
-Route::get('admin.perfil', 'AdminController@indexMyPerfil')->name('perfil')->middleware('auth');
-Route::get('admin.user.bloquear/{id_user_type}/{id_user}', 'AdminController@blockUser')->name('perfil')->middleware('auth');
-Route::get('admin.user.deletar/{id_user}', 'AdminController@deleteUser')->name('perfil')->middleware('auth');
+Route::get('admin/cliente.sidebar', 'AdminController@indexClientes')->name('perfil')->middleware('auth');
+Route::get('admin/profissional.sidebar', 'AdminController@indexProfissionais')->name('perfil')->middleware('auth');
+Route::get('admin/parceiro.sidebar', 'AdminController@indexParceiros')->name('perfil')->middleware('auth');
+Route::get('admin/perfil', 'AdminController@indexMyPerfil')->name('perfil')->middleware('auth');
+Route::get('admin/user.bloquear/{id_user_type}/{id_user}', 'AdminController@blockUser')->name('perfil')->middleware('auth');
+Route::get('admin/user.deletar/{id_user}', 'AdminController@deleteUser')->name('perfil')->middleware('auth');
 
 // Cat
-Route::get('admin.categoria.index', 'AdminController@indexCatAndSub')->name('admin.categoria.index')->middleware('auth');
-Route::get('admin.categoria.new', 'AdminController@modalStoreCategoria')->name('admin.categoria.new')->middleware('auth');
-Route::post('admin.categoria.store', 'AdminController@storeCategoria')->name('admin.categoria.store')->middleware('auth');
-Route::get('admin.categoria.deletar/{id}', 'AdminController@deleteCategoria')->name('admin.categoria.deletar')->middleware('auth');
+Route::get('admin/categoria.index', 'AdminController@indexCatAndSub')->name('admin/categoria.index')->middleware('auth');
+Route::get('admin/categoria.new', 'AdminController@modalStoreCategoria')->name('admin/categoria.new')->middleware('auth');
+Route::post('admin/categoria.store', 'AdminController@storeCategoria')->name('admin/categoria.store')->middleware('auth');
+Route::get('admin/categoria.deletar/{id}', 'AdminController@deleteCategoria')->name('admin/categoria.deletar')->middleware('auth');
 
 // Sub
-Route::get('admin.subcategoria.index', 'AdminController@indexCatAndSub')->name('admin.subcategoria.index')->middleware('auth');
-Route::get('admin.subcategoria.new', 'AdminController@modalStoreSubCategoria')->name('admin.subcategoria.new')->middleware('auth');
-Route::post('admin.subcategoria.store', 'AdminController@storeSubCategoria')->name('admin.subcategoria.store')->middleware('auth');
-Route::get('admin.subcategoria.deletar/{id}', 'AdminController@deleteSubCategoria')->name('admin.subcategoria.deletar')->middleware('auth');
+Route::get('admin/subcategoria.index', 'AdminController@indexCatAndSub')->name('admin/subcategoria.index')->middleware('auth');
+Route::get('admin/subcategoria.new', 'AdminController@modalStoreSubCategoria')->name('admin/subcategoria.new')->middleware('auth');
+Route::post('admin/subcategoria.store', 'AdminController@storeSubCategoria')->name('admin/subcategoria.store')->middleware('auth');
+Route::get('admin/subcategoria.deletar/{id}', 'AdminController@deleteSubCategoria')->name('admin/subcategoria.deletar')->middleware('auth');
 
 
 
@@ -69,7 +79,7 @@ Route::post('news.deletar/{id_news}', 'AdminController@deleteNews')->name('news'
 Route::post('news.editar/{id_news}', 'AdminController@updateNews')->name('news')->middleware('auth');
 
 //Indicacoes
-Route::post('pro.indicar.store', 'IndicarController@storeIndicarManual')->name('pro.indicar.store')->middleware('auth');
+Route::post('pro/indicar/store', 'IndicarController@storeIndicarManual')->name('pro/indicar/store')->middleware('auth');
 Route::get('pro.indicar.index', 'IndicarController@index')->name('pro.indicar.index')->middleware('auth');
 Route::get('pro.indicar.model_store', 'IndicarController@model_store')->name('pro.indicar.model_store')->middleware('auth');
 Route::get('pro.indicar.model_edit/{id}', 'IndicarController@model_edit')->name('pro.indicar.model_edit')->middleware('auth');
@@ -80,34 +90,35 @@ Route::get('pro.indicar.model_store_index', 'IndicarController@model_store_index
 Route::get('indicar.index', 'IndicarController@index')->name('indicar.index')->middleware('auth');
 
 
-Route::get('cliente.indicar.index', 'IndicarController@index')->name('cliente.indicar.index')->middleware('auth');
+Route::get('cliente/indicar/index', 'IndicarController@index')->name('cliente/indicar/index')->middleware('auth');
 Route::post('cliente.indicar.store', 'IndicarController@storeIndicarManual')->name('cliente.indicar.store')->middleware('auth');
-Route::get('cliente.indicar.model_store', 'IndicarController@model_store')->name('cliente.indicar.model_store')->middleware('auth');
+Route::get('cliente/indicar/model_store', 'IndicarController@model_store')->name('cliente/indicar/model_store')->middleware('auth');
 Route::get('cliente.indicar.model_edit/{id}', 'IndicarController@model_edit')->name('cliente.indicar.model_edit')->middleware('auth');
 Route::post('cliente.indicar.edit', 'IndicarController@editIndicarStatus')->name('cliente.indicar.edit')->middleware('auth');
 Route::get('cliente.indicar.model_delete/{id}', 'IndicarController@model_delete')->name('cliente.indicar.model_delete')->middleware('auth');
 Route::post('cliente.indicar.delete', 'IndicarController@editIndicarDelete')->name('cliente.indicar.delete')->middleware('auth');
-Route::get('cliente.indicar.model_store_index', 'IndicarController@model_store_index')->name('cliente.indicar.model_store_index')->middleware('auth');
+Route::get('cliente/indicar/model_store_index', 'IndicarController@model_store_index')->name('cliente/indicar/model_store_index')->middleware('auth');
 
 // Profisional Favorito
 Route::get('cliente.pro.favorito.index', 'ProfissionalFavoritoController@my_pro_index')->name('cliente.pro.favorito.index')->middleware('auth');
 Route::get('cliente.pro.favorito.new', 'ProfissionalFavoritoController@add_new_pro_index')->name('cliente.pro.favorito.index')->middleware('auth');
 Route::get('cliente.pro.favorito.new.add/{cliente_id}/{profissional_id}', 'ProfissionalFavoritoController@add_new_pro_store')->name('cliente.pro.favorito.index')->middleware('auth');
 Route::get('cliente.pro.favorito.delete/{profissional_id}', 'ProfissionalFavoritoController@my_pro_delete')->name('cliente.pro.favorito.delete')->middleware('auth');
-Route::get('cliente.indicar.model_store_inv/{professional_id}', 'ProfissionalFavoritoController@model_store_on_fav')->name('cliente.indicar.model_store')->middleware('auth');
+Route::get('cliente/indicar/model_store_inv/{professional_id}', 'ProfissionalFavoritoController@model_store_on_fav')->name('cliente/indicar/model_store')->middleware('auth');
 
 // Profisional Favorito
 Route::get('cliente.pro.oferta.index', 'OfertaClienteController@my_pro_index')->name('cliente.pro.favorito.index')->middleware('auth');
 Route::get('cliente.pro.oferta.new', 'OfertaClienteController@add_new_pro_index')->name('cliente.pro.favorito.index')->middleware('auth');
 Route::get('cliente.pro.oferta.new.add/{cliente_id}/{profissional_id}', 'OfertaClienteController@add_new_pro_store')->name('cliente.pro.favorito.index')->middleware('auth');
 Route::get('cliente.pro.oferta.delete/{profissional_id}', 'OfertaClienteController@my_pro_delete')->name('cliente.pro.favorito.delete')->middleware('auth');
-Route::get('cliente.indicar.oferta.model_store_inv/{professional_id}', 'OfertaClienteController@model_store_on_fav')->name('cliente.indicar.model_store')->middleware('auth');
+Route::get('cliente.indicar.oferta.model_store_inv/{professional_id}', 'OfertaClienteController@model_store_on_fav')->name('cliente/indicar/model_store')->middleware('auth');
 
 
 // ADMIN
-Route::get('admin.afiliados', 'AdminController@indexAfiliado')->name('admin.index')->middleware('auth');
-Route::get('admin.profissional', 'AdminController@indexProfissionais')->name('admin.index')->middleware('auth');
-Route::get('admin.indicacoes', 'AdminController@indexIndicacoes')->name('admin.index')->middleware('auth');
+Route::get('admin/users', 'AdminController@indexUsers')->name('admin/index')->middleware('auth');
+Route::get('admin/afiliados', 'AdminController@indexPaciente')->name('admin/index')->middleware('auth');
+Route::get('admin/profissional', 'AdminController@indexProfissionais')->name('admin/index')->middleware('auth');
+Route::get('admin/indicacoes', 'AdminController@indexIndicacoes')->name('admin/index')->middleware('auth');
 
 
 //Ofertas

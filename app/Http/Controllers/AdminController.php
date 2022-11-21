@@ -14,9 +14,155 @@ use Illuminate\Support\Facades\Storage;
 use File;
 use App\Cat_Profissional;
 use App\SubCategory;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
+
+        // REGISTRO USER INTERNO : CHECKED
+        public function registerUser(Request $request)
+        {
+            $input_email = $request->only(['email']);  
+            $request_data = ['email' => 'required|email|unique:users,email'];
+            $validator = Validator::make($input_email, $request_data);
+
+     // json is null
+            if ($validator->fails()) {
+                $errors = json_decode(json_encode($validator->errors()), 1);
+                Session::flash('error', "Email já utilizado! Use outro diferente!"); 
+                    return back();
+            } 
+        
+            
+            // New
+               $user =  User::create([
+                'name' => $request['name'],
+                'email' => $request['email'],
+                'address' => $request['address'],
+                'function' => $request['function'],
+                'phone' => $request['phone'],
+                'status' => 'autorizado',
+                'user_type_id' => $request['user_type_id'],
+                'password' => bcrypt($request['password']),
+            ]);
+            
+            // attempt to do the login
+            if ($user) {
+                // Session::flash('success', "Sucesso!"); 
+                return redirect()->action('AdminController@indexUsers');
+            }
+              else
+              {
+                    Session::flash('error_email', "Houve erro ao criar a sua conta. Tente mais tarde!"); 
+                    return back();
+              
+              }
+   
+        }
+
+                // REGISTRO PACIENTE : CHECKED
+                public function registerPaciente(Request $request)
+                {
+                    $input_email = $request->only(['email']);  
+                    $request_data = ['email' => 'required|email|unique:users,email'];
+                    $validator = Validator::make($input_email, $request_data);
+        
+                        // json is null
+                    if ($validator->fails()) {
+                        $errors = json_decode(json_encode($validator->errors()), 1);
+                        Session::flash('error', "Email já utilizado! Use outro diferente!"); 
+                            return back();
+                    } 
+                
+                    
+                    // New
+                       $user =  User::create([
+                        'name' => $request['name'],
+                        'email' => $request['email'],
+                        'address' => $request['address'],
+                        'phone' => $request['phone'],
+                        'status' => 'autorizado',
+                        'user_type_id' => $request['user_type_id'],
+                        'password' => bcrypt($request['password']),
+                        'nacionalidade' => $request['nacionalidade'],
+                        'naturalidade' => $request['naturalidade'],
+                        'pai' => $request['pai'],
+                        'mae' => $request['mae'],
+                        'bairro' => $request['bairro'],
+                        'state' => $request['state'],
+                        'city' => $request['city'],
+                        'rg' => $request['rg'],
+                        'cpf' => $request['cpf'],
+                        'cep' => $request['cep'],
+                        'complemento' => $request['complemento'],
+                    ]);
+                    
+                    // attempt to do the login
+                    if ($user) {
+                        // Session::flash('success', "Sucesso!"); 
+                        return redirect()->action('AdminController@indexPaciente');
+                    }
+                      else
+                      {
+                            Session::flash('error_email', "Houve erro ao criar a sua conta. Tente mais tarde!"); 
+                            return back();
+                      
+                      }
+           
+                }
+
+                    // EDIT PACIENTE : CHECKED
+                    public function editPaciente(Request $request)
+                    {
+                        // $request->validate([
+                        //     'photo' => 'image|mimes:jpeg,png,jpg',
+                        // ]);
+            
+                        // $imageName = $request->file('photo');
+            
+                        // if($imageName != NULL){
+                        //     $extension = $imageName->getClientOriginalExtension();
+                        //     Storage::disk('public')->put(time().'.'.$imageName->getFilename().'.'.$extension,  File::get($imageName));
+                
+                        //     $photo = time().'.'.$imageName->getFilename().'.'.$extension;  
+                        // }
+
+                        // $aux_photo = '';
+                    
+                        // $imageName != NULL ? $aux_photo = $photo : $aux_photo = Auth::user()->photo;
+                        // New
+                           $user =  Auth::user()->update([
+                            'name' => $request['name'],
+                            'email' => $request['email'],
+                            'address' => $request['address'],
+                            'phone' => $request['phone'],
+                            'nacionalidade' => $request['nacionalidade'],
+                            'naturalidade' => $request['naturalidade'],
+                            'pai' => $request['pai'],
+                            'mae' => $request['mae'],
+                            'bairro' => $request['bairro'],
+                            'state' => $request['state'],
+                            'city' => $request['city'],
+                            'rg' => $request['rg'],
+                            'cpf' => $request['cpf'],
+                            'cep' => $request['cep'],
+                            'complemento' => $request['complemento'],
+                        ]);
+                        
+                    
+                        if ($user) {
+                            return redirect()->action('AdminController@indexMyPerfil');
+                        }
+                          else
+                          {
+                                Session::flash('error_email', "Houve erro ao criar a sua conta. Tente mais tarde!"); 
+                                return back();
+                          
+                          }
+               
+                    }
+
+
                     // Minha Conta (ADMIN)
                     public function indexMyPerfil(){
                         $user = User::find(Auth::user()->id);
@@ -26,22 +172,78 @@ class AdminController extends Controller
                     }
 
 
-    // Buscar a tabela de Afiliados
-    public function indexAfiliado(){
-        $afiliados = User::where('user_type_id',2)->get();
-        return view('admin.users')->with(["lista"=>$afiliados,"user_type"=>"Lista de Afiliados","msg" => 'afiliado']);
+// Store Company
+public function registerCompany(Request $request){
+    try{
+        $request->validate([
+            'photo_perfil' => 'image|mimes:jpeg,png,jpg|max:2048',
+        ]);
+
+        $imageName = $request->file('photo_perfil');
+
+        if($imageName != NULL){
+            $extension = $imageName->getClientOriginalExtension();
+            Storage::disk('public')->put(time().'.'.$imageName->getFilename().'.'.$extension,  File::get($imageName));
+
+            $photo = time().'.'.$imageName->getFilename().'.'.$extension;  
+        }
+
+
+        $shop = new Shop();
+        $shop->name = $request['name'];
+        $shop->user_admin = Auth::user()->id;
+        $shop->address = $request['address'];
+        $shop->phone = $request['phone'];
+        $shop->email = $request['email'];
+        $imageName != NULL ? $shop->photo = $photo : $shop->photo = $shop->photo;
+
+        $shop->razao_social = $request['razao_social'];
+        $shop->bairro = $request['bairro'];
+        $shop->state = $request['state'];
+
+        $shop->city = $request['city'];
+        $shop->cnpj = $request['cnpj'];
+        $shop->cep = $request['cep'];
+
+        $shop->complemento = $request['address'];
+        $shop->inscricao_municipal = $request['inscricao_municipal'];
+        
+        $shop->save();
+
+        $user = User::find(Auth::user()->id);
+        $shop = Auth::user()->shop;
+        return redirect()->action('UserController@perfil')->with(['user'=>$user, 'shop'=>$shop,'msg' => 'success']);
+       }
+    catch(Exception $ex){
+        return view('users.perfil')->with('msg', 'error');
 
     }
+}
+
+                       // Buscar a tabela de Users
+    public function indexUsers(){
+        $users = User::where('user_type_id',4)->get();
+        return view('admin/users')->with(["lista"=>$users,"user_type_id"=>4,"user_type"=>"Lista de usuários internos","msg" => 'registrant']);
+
+    }
+
+    // Buscar a tabela de Pacientes
+    public function indexPaciente(){
+        $pacientes = User::where('user_type_id',2)->get();
+        return view('admin/users')->with(["lista"=>$pacientes,"user_type_id"=>2,"user_type"=>"Lista de pacientes","msg" => 'paciente']);
+
+    }
+
         // Buscar a tabela de Profissionais
         public function indexProfissionais(){
             $pro = User::where('user_type_id',3)->get();
-            return view('admin.users')->with(["lista"=>$pro,"user_type"=>"Lista de Profissionais","msg" => 'pro']);
+            return view('admin/users')->with(["lista"=>$pro,"user_type_id"=>3,"user_type"=>"Lista de Profissionais","msg" => 'pro']);
     
         }
             // Buscar a tabela de Parceiros
     public function indexIndicacoes(){
         $indicacoes = Indicar::orderBy('created_at', 'DESC')->get();
-        return view('admin.users')->with(["lista"=>$indicacoes,"user_type"=>"Lista de Indicações","msg" => 'indicar']);
+        return view('admin/users')->with(["lista"=>$indicacoes,"user_type"=>"Lista de Agendamentos","msg" => 'indicar']);
 
     }
 
@@ -53,7 +255,7 @@ class AdminController extends Controller
                     $user->save();
 
                     $users = User::where('user_type_id',$request['id_user_type'])->get();
-                    return view('admin.users')->with(["users"=>$users,"user_type"=>"Lista de usuários","msg" => 'success']);
+                    return view('admin/users')->with(["users"=>$users,"user_type"=>"Lista de usuários","msg" => 'success']);
             
                 }
 
@@ -73,10 +275,10 @@ class AdminController extends Controller
 
                     // $users = User::where('user_type_id',$request['id_user_type'])->get();
 
-                    // return view('admin.users')->with(["users"=>$users,"user_type"=>"Lista de usuários","msg" => 'success']);
+                    // return view('admin/users')->with(["users"=>$users,"user_type"=>"Lista de usuários","msg" => 'success']);
                     
                     // $pro = User::where('user_type_id',3)->get();
-                    // return view('admin.users')->with(["lista"=>$pro,"user_type"=>"Lista de Profissionais","msg" => 'pro']);
+                    // return view('admin/users')->with(["lista"=>$pro,"user_type"=>"Lista de Profissionais","msg" => 'pro']);
                 
 
                     
@@ -199,7 +401,7 @@ $news->save();
                     $cat= Cat_Profissional::all();
                         $subCat = SubCategory::all();
        
-          return view('admin.categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => '']);
+          return view('admin/categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => '']);
                 
                         
                     }
@@ -211,7 +413,7 @@ $news->save();
                         $cat= Cat_Profissional::all();
                             $subCat = SubCategory::all();
            
-              return view('admin.categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => 'modal_store_categoria']);
+              return view('admin/categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => 'modal_store_categoria']);
                     
                             
                         }
@@ -228,7 +430,7 @@ $news->save();
                         $cat= Cat_Profissional::all();
                             $subCat = SubCategory::all();
            
-              return view('admin.categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => 'success']);
+              return view('admin/categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => 'success']);
                     
                             
                         }
@@ -243,7 +445,7 @@ $news->save();
                         $cat= Cat_Profissional::all();
                             $subCat = SubCategory::all();
            
-              return view('admin.categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => 'success']);
+              return view('admin/categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => 'success']);
                     
                             
                         }
@@ -259,7 +461,7 @@ $news->save();
                         $cat= Cat_Profissional::all();
                             $subCat = SubCategory::all();
            
-              return view('admin.categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => 'modal_store_subcategoria']);
+              return view('admin/categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => 'modal_store_subcategoria']);
                     
                             
                         }
@@ -277,7 +479,7 @@ $news->save();
                         $cat= Cat_Profissional::all();
                             $subCat = SubCategory::all();
            
-              return view('admin.categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => 'success_2']);
+              return view('admin/categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => 'success_2']);
                     
                             
                         }
@@ -292,7 +494,7 @@ $news->save();
                         $cat= Cat_Profissional::all();
                             $subCat = SubCategory::all();
            
-              return view('admin.categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => 'success_2']);
+              return view('admin/categoria')->with(['categorias'=>$cat, 'subcategorias'=>$subCat,'msg' => 'success_2']);
                     
                             
                         }

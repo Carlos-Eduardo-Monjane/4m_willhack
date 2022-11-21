@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('body')
-<section class="section" style="background-image: url('assets/img/Logo-Social-Media.jpg'); background-size: 100% 100%; background-repeat: no-repeat; background-size: fill;">
+<section class="section" style="background-image: url('assets/img/4m_big.png'); background-size: 100% 100%; background-repeat: no-repeat; background-size: fill;">
     
     <div class="page-header ">
         <div class="container rounded-lg ">

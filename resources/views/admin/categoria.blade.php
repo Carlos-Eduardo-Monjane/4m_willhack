@@ -77,7 +77,7 @@
                             <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                                 <h6 class="text-white text-capitalize ps-3">Categorias</h6>
                              <div class="col-4 text-end">
-                          <a href="{{ url('admin.categoria.new') }}" class="btn bg-gradient-dark mb-0"><i class="material-icons text-sm" translate="no">add</i>&nbsp;&nbsp;Nova Categoria </a>
+                          <a href="{{ url('admin/categoria.new') }}" class="btn bg-gradient-dark mb-0"><i class="material-icons text-sm" translate="no">add</i>&nbsp;&nbsp;Nova Categoria </a>
                         </div>
                             
                             </div>
@@ -102,7 +102,7 @@
                     </h5>
                 </div>
              
-                <form action="{{url('admin.categoria.store') }}"  method="post" enctype="multipart/form-data">
+                <form action="{{url('admin/categoria.store') }}"  method="post" enctype="multipart/form-data">
                     {!! csrf_field() !!}
                 
                 <div class="modal-body">
@@ -208,7 +208,7 @@
                                                                     </td>
                                                                    
                                                                      <td class="text-center">
-                                                                        <a href="{{ url('admin.categoria.deletar') }}/{{ $item->id }}"
+                                                                        <a href="{{ url('admin/categoria.deletar') }}/{{ $item->id }}"
                                                                             class="btn btn-link text-danger text-gradient px-3 mb-0"><i
                                                                                 class="material-icons text-sm me-2" translate="no"
                                                                                 title="Apagar">delete</i></a>
@@ -240,7 +240,7 @@
                             <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                                 <h6 class="text-white text-capitalize ps-3">Sub-Categorias</h6>
                              <div class="col-4 text-end">
-                          <a href="{{ url('admin.subcategoria.new') }}" class="btn bg-gradient-dark mb-0"><i class="material-icons text-sm" translate="no">add</i>&nbsp;&nbsp;Nova Sub-Categoria </a>
+                          <a href="{{ url('admin/subcategoria.new') }}" class="btn bg-gradient-dark mb-0"><i class="material-icons text-sm" translate="no">add</i>&nbsp;&nbsp;Nova Sub-Categoria </a>
                         </div>
                             
                             </div>
@@ -265,7 +265,7 @@
                     </h5>
                 </div>
              
-                <form action="{{url('admin.subcategoria.store') }}"  method="post" enctype="multipart/form-data">
+                <form action="{{url('admin/subcategoria.store') }}"  method="post" enctype="multipart/form-data">
                     {!! csrf_field() !!}
                 
                 <div class="modal-body">
@@ -379,7 +379,7 @@
                                                                     </td>
                                                                    
                                                                      <td class="text-center">
-                                                                        <a href="{{ url('admin.categoria.deletar') }}/{{ $item->id }}"
+                                                                        <a href="{{ url('admin/categoria.deletar') }}/{{ $item->id }}"
                                                                             class="btn btn-link text-danger text-gradient px-3 mb-0"><i
                                                                                 class="material-icons text-sm me-2" 
                                                                                 translate="no"
@@ -533,7 +533,7 @@
                                                                                 {{ $item->afiliado_indicador->name }}</h6>
                                                                             <p class="text-xs text-secondary mb-0">
                                                                                
-                                                                               <a href="https://wa.me/{{$item->afiliado_indicador->phone}}?text=Minhas Indicações!"  target="_blank">{{ $item->afiliado_indicador->phone }}
+                                                                               <a href="https://wa.me/{{$item->afiliado_indicador->phone}}?text=Minhas Agendamentos!"  target="_blank">{{ $item->afiliado_indicador->phone }}
                                                                         </a> 
                                                                                 </p>
                                                                                 

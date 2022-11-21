@@ -56,7 +56,7 @@
                     </h5>
                 </div>
              
-                <form action="{{url('pro.indicar.store') }}"  method="post" enctype="multipart/form-data">
+                <form action="{{url('pro/indicar/store') }}"  method="post" enctype="multipart/form-data">
                     {!! csrf_field() !!}
                 
                 <div class="modal-body">
@@ -100,7 +100,7 @@
 
                 <div class="modal-footer flex-center">
                     <a type="button" id="closemodal" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</a>
-                    <button class="btn btn-outline-info waves-effect" type="submit" title="Confirmar">Concluir a indicação</button>
+                    <button class="btn btn-outline-info waves-effect" type="submit" title="Confirmar">Concluir</button>
                 </div>
                 </form>
             </div>

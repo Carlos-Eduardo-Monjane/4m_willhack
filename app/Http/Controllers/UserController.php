@@ -66,6 +66,7 @@ class UserController extends Controller
     }
 
     public function updateShop(Request $request){
+        
         try{
 
             $request->validate([

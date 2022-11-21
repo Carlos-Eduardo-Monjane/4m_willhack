@@ -62,8 +62,9 @@ class ComposerServiceProvider extends ServiceProvider
 
 
             // Count de cada tipo de USER
-            $usersAfiliados     = User::where('user_type_id',2)->get();
-            $usersProfissionais = User::where('user_type_id',3)->get();
+            $pacientes     = User::where('user_type_id',2)->get();
+            $empresas = User::where('user_type_id',3)->get();
+            $users_internos = User::where('user_type_id',4)->get();
 
 
             $total_indicacoes = Indicar::where($entidade, Auth::user()->id)->get();
@@ -150,8 +151,9 @@ class ComposerServiceProvider extends ServiceProvider
             }
             
             // Count de cada tipo de USER
-            $usersAfiliados     = User::where('user_type_id',2)->get();
-            $usersProfissionais = User::where('user_type_id',3)->get();
+            $pacientes     = User::where('user_type_id',2)->get();
+            $empresas = User::where('user_type_id',3)->get();
+            $users_internos = User::where('user_type_id',4)->get();
    
             $view->with([
             'profissional_categories' => $profissional_categories,
@@ -189,8 +191,9 @@ class ComposerServiceProvider extends ServiceProvider
             
             
             
-            'usersAfiliados'      => $usersAfiliados->count(),
-            'usersProfissionais' => $usersProfissionais->count(),
+            'pacientes'      => $pacientes->count(),
+            'empresas' => $empresas->count(),
+            'users_internos' => $users_internos->count(),
         ]);
         });
     }

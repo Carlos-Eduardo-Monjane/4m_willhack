@@ -21,10 +21,10 @@ class HomeController extends Controller
     public function index()
     {
     
-            if(Auth::user()->user_type_id == 2){
-               return redirect('cliente.pro.favorito.index');
+            // if(Auth::user()->user_type_id == 2){
+            //    return redirect('cliente.pro.favorito.index');
   
-            }
+            // }
             return view('main')->with(['msg' => '']);
    
     }

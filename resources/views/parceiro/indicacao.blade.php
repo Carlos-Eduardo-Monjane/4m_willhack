@@ -8,7 +8,7 @@
       <div class="card my-4">
         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
           <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-            <h6 class="text-white text-capitalize ps-3">GERENCIAMENTO DE INDICAÇÕES</h6>
+            <h6 class="text-white text-capitalize ps-3">GERENCIAMENTO DE AGENDAMENTOS</h6>
           </div>
         </div>
        
@@ -32,13 +32,13 @@
                     <div class="card-header pb-0 px-3">
                       <div class="row">
                         <div class="col-md-6">
-                          <h6 class="mb-0">Indicações ({{$indicacoes_count}})</h6>
+                          <h6 class="mb-0">Agendas ({{$indicacoes_count}})</h6>
                           
                           
 
                         </div>
                         <div class="col-6 text-end">
-                          <a href="{{ url('cliente.indicar.model_store') }}" class="btn bg-gradient-dark mb-0"><i class="material-icons text-sm" translate="no">add</i>&nbsp;&nbsp;Nova indicação </a>
+                          <a href="{{ url('cliente/indicar/model_store') }}" class="btn bg-gradient-dark mb-0"><i class="material-icons text-sm" translate="no">add</i>&nbsp;&nbsp;Novo agendamento </a>
                         </div>
                       </div>
                     </div>
@@ -154,7 +154,7 @@
                             <div class="d-flex flex-column justify-content-center">
                                 
                               <p class="text-xs font-weight-bold mb-0">
-                                  <a href="https://wa.me/{{str_replace(['(',')','-',' '], '', "55".$item->pro_indicado->phone)}}?text=Minhas Indicações!"  target="_blank">
+                                  <a href="https://wa.me/{{str_replace(['(',')','-',' '], '', "55".$item->pro_indicado->phone)}}?text=Minhas Agendamentos!"  target="_blank">
                                   {{$item->pro_indicado->phone}} 
                                   </a></p>
                             </div>
@@ -195,7 +195,7 @@
                                  @if(isset($item->cliente_phone))
                             <div class="d-flex flex-column justify-content-center">
                                   <span class="text-secondary text-xs font-weight-bold">
-                                  <a href="https://wa.me/{{str_replace(['(',')','-',' '], '', "55".$item->cliente_phone)}}?text=Minhas Indicações!"  target="_blank">{{$item->cliente_phone}}</a>
+                                  <a href="https://wa.me/{{str_replace(['(',')','-',' '], '', "55".$item->cliente_phone)}}?text=Minhas Agendamentos!"  target="_blank">{{$item->cliente_phone}}</a>
                                  </span>
                              </div>
                              @else
@@ -256,10 +256,10 @@
                     <div class="card-header pb-0 px-3">
                     <div class="row">
                         <div class="col-md-6">
-                        <h6 class="mb-0">Indicações ({{$indicacoes_count}})</h6>
+                        <h6 class="mb-0">Agendas ({{$indicacoes_count}})</h6>
                         </div>
                         <div class="col-6 text-end">
-                        <a href="{{ url('pro.indicar.model_store') }}" class="btn bg-gradient-dark mb-0"><i class="material-icons text-sm" translate="no">add</i>&nbsp;&nbsp;Nova indicação </a>
+                        <a href="{{ url('pro.indicar.model_store') }}" class="btn bg-gradient-dark mb-0"><i class="material-icons text-sm" translate="no">add</i>&nbsp;&nbsp;Novo agendamento </a>
                         </div>
                     </div>
                     </div>
@@ -313,7 +313,7 @@
                                 <p class="text-xs font-weight-bold mb-0">
 
                                 @if(isset($item->afiliado_indicador->phone))
-                                <a href="https://wa.me/{{str_replace(['(',')','-',' '], '', "55".$item->afiliado_indicador->phone)}}?text=Minhas Indicações!" 
+                                <a href="https://wa.me/{{str_replace(['(',')','-',' '], '', "55".$item->afiliado_indicador->phone)}}?text=Minhas Agendamentos!" 
                                  target="_blank">{{$item->afiliado_indicador->phone}}</a>
                                
                                 @else
@@ -355,7 +355,7 @@
                     <div class="d-flex flex-column justify-content-center">
                     @if(isset($item->cliente_phone))
                     <span class="text-secondary text-xs font-weight-bold">
-                    <a href="https://wa.me/{{str_replace(['(',')','-',' '], '', "55".$item->cliente_phone)}}?text=Minhas Indicações!"  target="_blank">{{$item->cliente_phone}}</a>
+                    <a href="https://wa.me/{{str_replace(['(',')','-',' '], '', "55".$item->cliente_phone)}}?text=Minhas Agendamentos!"  target="_blank">{{$item->cliente_phone}}</a>
                     </span>
                     @else
                     <span class="text-secondary text-xs font-weight-bold">
@@ -657,16 +657,16 @@
                 <!--Header-->
                 <div class="modal-header d-flex justify-content-center">
                     <h5 class="heading">
-                      Quem você irá adicionar como indicação?
+                      Marcação de agendamento
                     </h5>
                 </div>
              
-                <form action="{{url('pro.indicar.store') }}"  method="post" enctype="multipart/form-data">
+                <form action="{{url('pro/indicar/store') }}"  method="post" enctype="multipart/form-data">
                     {!! csrf_field() !!}
                 
                 <div class="modal-body">
                   <hr/>
-                  <p class="col-12 small sm text-sm text-small">Preencha as informações de quem deseja adicionar.</p>
+                  <p class="col-12 small sm text-sm text-small">Preencha as informações.</p>
                   <hr/>
 
                   <div class="input-group input-group-outline mb-3">
@@ -698,14 +698,14 @@
                   <hr/>
 
                   @if (Auth::user()->user_type_id == 2)
-                  <p class="col-12 small sm text-sm text-small">Preencha as informações do profissional.</p>
+                  <p class="col-12 small sm text-sm text-small">Escolha a empresa.</p>
                   <hr/>
 
                   <div class="input-group input-group-outline mb-3" >
                     <select id="afiliados" name="profissional_id" required  class="form-control afiliados">
                       <option value=""> Quem é o profissional?</option>
                       @foreach($profissionais as $item)
-                          <option value="{{ $item->pro_favorito->id }}">{{ $item->pro_favorito->name }}</option>
+                          <option value="{{ $item->id }}">{{ $item->name }}</option>
                       @endforeach
                     </select>
                   </div>
@@ -714,7 +714,7 @@
 
 
                   @if (Auth::user()->user_type_id == 3)
-                  <p class="col-12 small sm text-sm text-small">Preencha as informações de quem indicou.</p>
+                  {{-- <p class="col-12 small sm text-sm text-small">Preencha as informações de quem indicou.</p>
                   <hr/>
 
                   <div class="input-group input-group-outline mb-3" >
@@ -724,7 +724,7 @@
                           <option value="{{ $item->id }}">{{ $item->name }}</option>
                       @endforeach
                     </select>
-                  </div>
+                  </div> --}}
                   @endif
 
 
@@ -743,7 +743,7 @@
 
                 <div class="modal-footer flex-center">
                     <a type="button" id="closemodal" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</a>
-                    <button class="btn btn-outline-info waves-effect" type="submit" title="Confirmar">Concluir a indicação</button>
+                    <button class="btn btn-outline-info waves-effect" type="submit" title="Confirmar">Concluir</button>
                 </div>
                 </form>
             </div>

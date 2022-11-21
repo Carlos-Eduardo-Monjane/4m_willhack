@@ -6,7 +6,7 @@
 
                         
 
-                <div class="page-header align-items-start min-vh-100" style="background-image: url('assets/img/Logo-Social-Media.jpg'); background-size: 80%; background-repeat: no-repeat;">
+                <div class="page-header align-items-start min-vh-100" style="background-image: url('assets/img/4m_big.png'); background-size: 80%; background-repeat: no-repeat;">
 
                 
                    

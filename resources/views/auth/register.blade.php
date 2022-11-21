@@ -10,7 +10,7 @@
                     <div
                         class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column">
                         <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center"
-                            style="background-image: url('assets/img/Logo-Social-Media.jpg'); background-size: 100% 100%; background-repeat: no-repeat; background-size: fill;">
+                            style="background-image: url('assets/img/logo-ct-dark.png'); background-size: 100% 90%; background-repeat: no-repeat;">
                             <span class="mask  bg-gradient-primary  opacity-5"></span>
                         </div>
                     </div>
@@ -18,14 +18,23 @@
                     <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
                         <div class="card card-plain">
                             <div class="card-header card-body">
-                                <h4 class="font-weight-bolder">CADASTRO</h4>
+                                <h4 class="font-weight-bolder">Registro</h4>
                                 {{-- <p class="mb-0">Restrito a Parceiros e profissionais </p> --}}
                             </div>
                             <div class="card-body">
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
+
                                     <div class="input-group input-group-outline mb-3">
-                                        <label class="form-label">Nome Completo</label>
+                                        <select name="user_type_id" required class="form-control" onchange="showDiv(this)">
+                                            <option value="">Selecione o tipo de usuário:</option>
+                                            <option value="3">Empresa</option>
+                                            <option value="2">Paciente</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group input-group-outline mb-3" >
+                                        <label id="nome_responsavel_div" class="form-label">Nome Completo</label>
                                         <input type="text" required autocomplete="name" name="name"
                                             value="{{ old('name') }}"
                                             class="form-control @error('name') is-invalid @enderror">
@@ -37,8 +46,10 @@
                                         @enderror
                                     </div>
 
-                                    <div class="input-group input-group-outline mb-3">
-                                        <label class="form-label">E-mail</label>
+                                    
+
+                                    <div class="input-group input-group-outline mb-3" >
+                                        <label id="email_responsavel_div" class="form-label">E-mail</label>
                                         <input type="email" required name="email" value="{{ old('email') }}"
                                             autocomplete="email" class="form-control @error('email') is-invalid @enderror">
                                         @error('email')
@@ -47,6 +58,8 @@
                                             </span>
                                         @enderror
                                     </div>
+
+                                
 
 
                                     <div class="input-group input-group-outline mb-3">
@@ -62,15 +75,10 @@
                                     </div>
 
 
-                                    <div class="input-group input-group-outline mb-3">
-                                        <select name="user_type_id" required class="form-control" onchange="showDiv(this)">
-                                            <option value="">Selecione o tipo de usuário:</option>
-                                            <option value="3">Profissional</option>
-                                            <option value="2">Afiliado</option>
-                                        </select>
-                                    </div>
 
-                                    <div id="especialidade_div" class="input-group input-group-outline mb-3"
+
+
+                                    {{-- <div id="especialidade_div" class="input-group input-group-outline mb-3"
                                         style="display:none;">
                                         <select name="category_id" class="form-control">
                                             <option value="">Selecione a Categoria:</option>
@@ -78,9 +86,9 @@
                                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                                             @endforeach
                                         </select>
-                                    </div>
+                                    </div> --}}
 
-                                    <div id="subespecialidade_div" class="input-group input-group-outline mb-3"
+                                    {{-- <div id="subespecialidade_div" class="input-group input-group-outline mb-3"
                                         style="display:none;">
                                         <select name="subcategory_id" class="form-control">
                                             <option value="">Selecionar Subcategoria:</option>
@@ -88,20 +96,20 @@
                                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                                             @endforeach
                                         </select>
-                                    </div>
+                                    </div> --}}
 
-                                    <div id="biography_div" class="input-group input-group-outline mb-3"
+                                    {{-- <div id="biography_div" class="input-group input-group-outline mb-3"
                                         style="display:none;">
-                                        <label class="form-label">Sua biografia</label>
-                                        <textarea type="text" autocomplete="biography" name="biography" value="{{ old('biography') }}"
-                                            class="form-control @error('biography') is-invalid @enderror"></textarea>
+                                        <textarea type="text" autocomplete="biography" placeholder="Sua biografia" name="biography" value="{{ old('biography') }}" class="form-control @error('biography') is-invalid @enderror"></textarea>
+                                          
+                                         
 
                                         @error('biography')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                    </div>
+                                    </div> --}}
 
                                     <div class="input-group input-group-outline mb-3">
                                         <label class="form-label">Senha</label>
@@ -163,6 +171,7 @@
         {{-- Script que oculta os campos se nao for um profissional --}}
         <script type="text/javascript">
             $(document).ready(function() {
+                
                 $.getJSON('https://servicodados.ibge.gov.br/api/v1/localidades/estados/', {
                     id: 10,
                 }, function(json) {
@@ -209,18 +218,51 @@
             });
 
             function showDiv(select) {
-
                 if (select.value == 3) {
+                document.getElementById("email_responsavel_div").innerHTML =
+            "<label>E-mail do responsável</label>";
 
-                    document.getElementById('especialidade_div').style.display = "";
-                    document.getElementById('subespecialidade_div').style.display = "";
-                    document.getElementById('biography_div').style.display = "";
-                } else {
-                    document.getElementById('especialidade_div').style.display = "none";
-                    document.getElementById('subespecialidade_div').style.display = "none";
-                    document.getElementById('biography_div').style.display = "none";
+            document.getElementById("nome_responsavel_div").innerHTML =
+            "<label>Nome do responsável</label>";
 
+                }else{
+                    document.getElementById("email_responsavel_div").innerHTML =
+            "<label>E-mail</label>";
+            document.getElementById("nome_responsavel_div").innerHTML =
+            "<label>Nome completo</label>";
                 }
+
+                // if (select.value == 3) {
+                    
+                    // document.getElementById('especialidade_div').style.display = "";
+                    // document.getElementById('subespecialidade_div').style.display = "";
+                    // document.getElementById('biography_div').style.display = "";
+                    // document.getElementById('email_responsavel_div').style.display = "";
+                    // document.getElementById('email_normal_div').style.display = "none";
+                    // document.getElementById('nome_responsavel_div').style.display = "";
+
+                    // document.getElementById('nome_normal_div').style.display = "none";
+
+                    
+
+            // document.getElementById("nome_responsavel_div").innerHTML +=
+            // "<label id='nome_responsavel_div' class="form-label">Nome do responsável</label>";
+
+                // } else {
+                    // document.getElementById('especialidade_div').style.display = "none";
+                    // document.getElementById('subespecialidade_div').style.display = "none";
+                    // document.getElementById('biography_div').style.display = "none";
+                    // document.getElementById('email_responsavel_div').style.display = "none";
+                    // document.getElementById('email_normal_div').style.display = "";
+                    // document.getElementById('nome_responsavel_div').style.display = "none";
+                    // document.getElementById('nome_normal_div').style.display = "";
+
+            //         document.getElementById("email_responsavel_div").innerHTML +=
+            // "<label id='email_responsavel_div' class="form-label">E-mail</label>";
+
+            // document.getElementById("nome_responsavel_div").innerHTML +=
+            // "<label id='nome_responsavel_div' class="form-label">Nome Completo</label>";
+                // }
             }
         </script>
 
